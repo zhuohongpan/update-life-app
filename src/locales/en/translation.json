@@ -1,0 +1,24 @@
+{
+  "app": {
+    "name": "Update Life APP",
+    "tagline": "Balance your life elements",
+    "description": "Track and optimize your daily life balance"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "displayName": "Display Name",
+    "forgotPassword": "Forgot Password?",
+    "resetPassword": "Reset Password",
+    "or": "or",
+    "continueWith": "Continue with {{provider}}",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "registerNow": "Register now",
+    "loginNow": "Login now"
+  }
+}
