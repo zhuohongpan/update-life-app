@@ -274,53 +274,6 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-
-<span className="text-sm mt-1">{t("categories.socialPartner")}</span>
-                <span className="text-xs text-gray-500">{balanceData.socialPartner ? balanceData.socialPartner.toFixed(1) : 0}%</span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Time Tracker Component */}
-          <div className="bg-white p-4 rounded-lg shadow mb-6">
-            <h3 className="text-lg font-semibold mb-4">{t("dashboard.timeTracker")}</h3>
-            <TimeTracker userId={currentUser.uid} />
-          </div>
-          
-          {/* Emotion Tracker Component */}
-          <div className="bg-white p-4 rounded-lg shadow mb-6">
-            <h3 className="text-lg font-semibold mb-4">{t("dashboard.emotionTracker")}</h3>
-            <EmotionTracker userId={currentUser.uid} />
-          </div>
-          
-          {/* AI Generated Schedule */}
-          {showSchedule && suggestedSchedule && (
-            <div className="bg-white p-4 rounded-lg shadow mb-6">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-semibold">{t("dashboard.suggestedSchedule")}</h3>
-                <button 
-                  onClick={() => setShowSchedule(false)}
-                  className="text-gray-500 hover:text-gray-700">
-                  <i className="fas fa-times"></i>
-                </button>
-              </div>
-              
-              <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: suggestedSchedule }}></div>
-              
-              <div className="mt-4 flex justify-end">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
-                  {t("dashboard.saveSchedule")}
-                </button>
-              </div>
-            </div>
-          )}
-        </>
-      )}
-    </div>
-  );
-};
-
-export default Dashboard;
           
           {/* Balance Meter */}
           <div className="bg-white p-4 rounded-lg shadow mb-6">
@@ -377,4 +330,49 @@ export default Dashboard;
                     style={{ width: `${balanceData.socialPartner || 0}%` }}
                   ></div>
                 </div>
-                <span className="text-sm mt-1">{t("categories.socialPartner")
+                <span className="text-sm mt-1">{t("categories.socialPartner")}</span>
+                <span className="text-xs text-gray-500">{balanceData.socialPartner ? balanceData.socialPartner.toFixed(1) : 0}%</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Time Tracker Component */}
+          <div className="bg-white p-4 rounded-lg shadow mb-6">
+            <h3 className="text-lg font-semibold mb-4">{t("dashboard.timeTracker")}</h3>
+            <TimeTracker userId={currentUser.uid} />
+          </div>
+          
+          {/* Emotion Tracker Component */}
+          <div className="bg-white p-4 rounded-lg shadow mb-6">
+            <h3 className="text-lg font-semibold mb-4">{t("dashboard.emotionTracker")}</h3>
+            <EmotionTracker userId={currentUser.uid} />
+          </div>
+          
+          {/* AI Generated Schedule */}
+          {showSchedule && suggestedSchedule && (
+            <div className="bg-white p-4 rounded-lg shadow mb-6">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-lg font-semibold">{t("dashboard.suggestedSchedule")}</h3>
+                <button 
+                  onClick={() => setShowSchedule(false)}
+                  className="text-gray-500 hover:text-gray-700">
+                  <i className="fas fa-times"></i>
+                </button>
+              </div>
+              
+              <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: suggestedSchedule }}></div>
+              
+              <div className="mt-4 flex justify-end">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+                  {t("dashboard.saveSchedule")}
+                </button>
+              </div>
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
+};
+
+export default Dashboard;
